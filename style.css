@@ -1,0 +1,144 @@
+/* style.css */
+
+/* 通用設定 */
+:root {
+    --primary-color: #ff9900; /* 亮橘色 */
+    --secondary-color: #5d3587; /* 深紫色 */
+    --text-color: #333;
+    --white: #ffffff;
+    --box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+/* 狗狗照片背景容器 */
+#app-container {
+    width: 100%;
+    max-width: 1200px;
+    background-image: url('dog.png'); /* **請將此處替換為您的狗狗照片檔案路徑** */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 讓背景圖片固定 */
+    padding: 20px;
+    min-height: 100vh;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 標頭樣式 */
+header {
+    text-align: center;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.5); /* 半透明背景確保文字可見 */
+    border-radius: 10px;
+}
+
+/* 計算機主體容器 */
+.calculator-box {
+    background: rgba(255, 255, 255, 0.95); /* 輕微透明白色背景 */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+/* 輸入欄位群組 */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--secondary-color);
+}
+
+.input-group input[type="date"],
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    box-sizing: border-box; /* 確保 padding 不會增加寬度 */
+    font-size: 16px;
+}
+
+/* 按鈕樣式 */
+#calculate-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    width: 100%;
+    box-shadow: 0 4px var(--secondary-color); /* 3D效果 */
+    margin-top: 10px;
+}
+
+#calculate-btn:hover {
+    background-color: #ffb74d; /* 較淺的橘色 */
+}
+
+#calculate-btn:active {
+    box-shadow: 0 2px var(--secondary-color);
+    transform: translateY(2px); /* 按下效果 */
+}
+
+/* 結果顯示區 */
+.result-area {
+    margin-top: 30px;
+    padding: 15px;
+    border: 2px dashed var(--primary-color);
+    border-radius: 10px;
+    text-align: left;
+    min-height: 50px; /* 預留空間 */
+}
+
+.result-area p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.result-area .dog-age {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+.result-area .human-age {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    font-weight: bolder;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+    .calculator-box {
+        margin: 10px;
+        padding: 20px;
+    }
+}

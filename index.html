@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>妙麗歲數計算機 - 狗與人類年齡換算</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app-container">
+        <header>
+            <h1>🐶 妙麗歲數計算機 🐾</h1>
+            <p>請輸入妙麗的出生日期與體型，計算實際年齡與人類等效年齡。</p>
+        </header>
+
+        <main class="calculator-box">
+            <div class="input-group">
+                <label for="birthdate">妙麗的出生日期:</label>
+                <input type="date" id="birthdate" required>
+            </div>
+
+            <div class="input-group">
+                <label for="weight-category">妙麗的體型 (根據成年體重):</label>
+                <select id="weight-category">
+                    <option value="small">小型犬 (10公斤以下)</option>
+                    <option value="medium">中型犬 (10~26公斤)</option>
+                    <option value="large">大型犬 (26公斤以上)</option>
+                </select>
+            </div>
+
+            <button id="calculate-btn">開始計算歲數</button>
+
+            <div id="result-display" class="result-area">
+                </div>
+        </main>
+    </div>
+
+    <script>
+        // JavaScript 程式碼將放在這裡
+        // 為了方便維護，我們會將其與 HTML 分開，但在此範例中為了方便您複製，先放在同一個檔案內。
+    </script>
+    <script src="script.js"></script> </body>
+</html>
